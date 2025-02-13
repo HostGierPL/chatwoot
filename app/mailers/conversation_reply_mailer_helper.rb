@@ -69,6 +69,8 @@ module ConversationReplyMailerHelper
       enable_starttls_auto: @channel.smtp_enable_starttls_auto,
       openssl_verify_mode: @channel.smtp_openssl_verify_mode,
       authentication: @channel.smtp_authentication
+      open_timeout: 15,
+      read_timeout: 15,
     }
 
     @options[:delivery_method] = :smtp
